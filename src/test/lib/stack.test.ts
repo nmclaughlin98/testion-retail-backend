@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import { BackendStack } from '@main/stack';
+import { BackendStack } from '../../../lib/stack-configuration';
 
 describe('BackendStack', () => {
     let stack: BackendStack;

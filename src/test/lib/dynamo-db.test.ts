@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import { DatabaseConstruct } from '@main/dynamo-db';
+import { DatabaseConstruct } from '../../../lib/stack';
 
 describe('DatabaseConstruct', () => {
     let stack: cdk.Stack;

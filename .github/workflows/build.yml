@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: 'npm'
 
       - name: Install Dependencies
@@ -26,13 +26,13 @@ jobs:
       - name: Check TypeScript Compilation
         run: npm run build
 
-      - name: Synthesize CDK App (cdk.out)
+      - name: Synthesize CDK App (cdk-out)
         run: npx cdk synth
 
-      # Uploads the cdk.out folder as an artifact tagged with the Run Number
+      # Uploads the cdk-out folder as an artifact tagged with the Run Number
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-artifact-${{ github.run_number }}
-          path: cdk.out/
+          path: cdk-out/
           retention-days: 7

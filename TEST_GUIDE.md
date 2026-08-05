@@ -8,7 +8,7 @@ The project follows a clean separation of main source code and tests:
 src/
 ├── main/               # Production source code
 │   ├── app.ts          # CDK App entry point
-│   ├── stack.ts        # Main stack definition
+│   ├── stack-configuration.ts        # Main stack definition
 │   ├── lambda.ts       # Lambda construct
 │   ├── gateway.ts      # API Gateway construct
 │   ├── dynamo-db.ts    # DynamoDB construct
@@ -37,7 +37,7 @@ This project includes comprehensive unit tests covering all Lambda handlers and 
 - **@types/jest**: TypeScript types for Jest
 
 ### Configuration Files
-- `jest.config.js`: Jest configuration with:
+- `jest.config.ts`: Jest configuration with:
   - TypeScript support via ts-jest
   - Path aliases for clean imports (@main/*)
   - Module name mapper for path resolution
@@ -60,7 +60,7 @@ import { handler } from '@main/handlers/manage-items';
 
 This is configured in:
 - `tsconfig.json`: Path mapping
-- `jest.config.js`: Transform and module name mapper
+- `jest.config.ts`: Transform and module name mapper
 
 ## Test Suites
 
@@ -218,7 +218,7 @@ If you see TypeScript errors:
 
 ### Module Resolution
 If tests can't find modules:
-1. Check that jest.config.js has moduleNameMapper configured
+1. Check that jest.config.ts has moduleNameMapper configured
 2. Ensure ts-jest transform is properly configured
 3. Verify file paths match the src/main and src/test structure
 4. Run `npm test` again - sometimes the first run needs to warm up

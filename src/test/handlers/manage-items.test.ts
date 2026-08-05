@@ -1,5 +1,4 @@
-import { handler } from '../../main/handlers/manage-items';
-import { APIGatewayProxyEventV2, APIGatewayProxyResultV2 } from 'aws-lambda';
+import { handler } from '../../main/lambda/handlers/manage-items';
 import { DynamoDBDocumentClient, GetCommand, PutCommand } from '@aws-sdk/lib-dynamodb';
 import { mockClient } from 'aws-sdk-client-mock';
 

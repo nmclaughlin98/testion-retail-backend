@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: 'npm'
 
       - name: Install Dependencies
@@ -30,7 +30,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifact-${{ github.event.inputs.build_number }}
-          path: cdk.out
+          path: cdk-out
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -39,6 +39,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      # Deploys directly from pre-synthesized cdk.out directory
+      # Deploys directly from pre-synthesized cdk-out directory
       - name: Deploy CDK Stack
-        run: npx cdk deploy --app cdk.out --require-approval never
+        run: npx cdk deploy --app cdk-out --require-approval never

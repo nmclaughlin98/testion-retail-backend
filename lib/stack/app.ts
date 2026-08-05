@@ -1,5 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
-import { BackendStack } from './stack';
+import { BackendStack } from '../stack-configuration';
 
 const app = new cdk.App();
 

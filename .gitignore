@@ -1,13 +1,15 @@
 # Dependencies
 node_modules/
 yarn.lock
+bin
+coverage
 
 # Build outputs
 dist/
 build/
 *.js
 !*.config.js
-!jest.config.js
+!jest.config.ts
 *.d.ts
 *.js.map
 
@@ -21,11 +23,6 @@ build/
 *.swo
 *~
 .DS_Store
-
-# CDK
-cdk.out/
-.cdk.staging/
-cdk.json
 
 # Environment
 .env

@@ -1,8 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import { DatabaseConstruct } from './dynamo-db';
-import { LambdaConstruct } from './lambda';
-import { ApiGatewayConstruct } from './gateway';
+import { ApiGatewayConstruct, DatabaseConstruct, LambdaConstruct } from './stack';
 
 export class BackendStack extends cdk.Stack {
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {

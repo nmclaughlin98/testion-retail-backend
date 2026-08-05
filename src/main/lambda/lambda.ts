@@ -18,7 +18,7 @@ export class LambdaConstruct extends Construct {
         // Descriptive name for the Lambda handler resource
         this.manageItemsFunction = new lambdaNodejs.NodejsFunction(this, 'ManageItemsHandler', {
             functionName: 'TestionRetail-ManageItems',
-            runtime: lambda.Runtime.NODEJS_20_X,
+            runtime: lambda.Runtime.NODEJS_24_X,
             entry: path.join(__dirname, './handlers/manage-items.ts'),
             handler: 'handler',
             memorySize: 128,

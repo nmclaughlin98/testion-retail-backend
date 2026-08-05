@@ -1,7 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { Template } from 'aws-cdk-lib/assertions';
-import { ApiGatewayConstruct } from '@main/gateway';
+import { ApiGatewayConstruct } from '../../../lib/stack';
 
 describe('ApiGatewayConstruct', () => {
     let stack: cdk.Stack;
@@ -11,7 +11,7 @@ describe('ApiGatewayConstruct', () => {
     beforeEach(() => {
         stack = new cdk.Stack();
         mockFunction = new lambda.Function(stack, 'MockFunction', {
-            runtime: lambda.Runtime.NODEJS_20_X,
+            runtime: lambda.Runtime.NODEJS_24_X,
             handler: 'index.handler',
             code: lambda.Code.fromInline('exports.handler = async () => {};'),
         });
