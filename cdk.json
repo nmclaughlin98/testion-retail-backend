@@ -1,6 +1,6 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/testion-retail-backend.ts",
-  "output": "bin/cdk-out",
+  "app": "npx ts-node --project tsconfig.json --prefer-ts-exts bin/testion-retail-backend.ts",
+  "output": "app",
   "watch": {
     "include": [
       "**"
@@ -14,7 +14,8 @@
       "tsconfig.json",
       "package*.json",
       "yarn.lock",
-      "test"
+      "test",
+      "app"
     ]
   },
   "context": {
