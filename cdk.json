@@ -1,5 +1,5 @@
 {
-  "app": "node dist/bin/testion-retail-backend.js",
+  "app": "npx ts-node --prefer-ts-exts bin/testion-retail-backend.ts",
   "output": "app",
   "watch": {
     "include": [
