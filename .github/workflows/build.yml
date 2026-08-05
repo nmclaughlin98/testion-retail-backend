@@ -26,13 +26,13 @@ jobs:
       - name: Check TypeScript Compilation
         run: npm run build
 
-      - name: Synthesize CDK App (cdk-out)
+      - name: Synthesize CDK App
         run: npx cdk synth
 
-      # Uploads the cdk-out folder as an artifact tagged with the Run Number
+      # Uploads the app folder as an artifact tagged with the Run Number
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-artifact-${{ github.run_number }}
-          path: cdk-out/
+          path: app/
           retention-days: 7
