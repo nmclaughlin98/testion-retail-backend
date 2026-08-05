@@ -3,6 +3,7 @@ node_modules/
 yarn.lock
 bin
 coverage
+/app
 
 # Build outputs
 dist/
