@@ -1,0 +1,38 @@
+name: 1. Build and Package
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Check TypeScript Compilation
+        run: npm run build
+
+      - name: Synthesize CDK App (cdk.out)
+        run: npx cdk synth
+
+      # Uploads the cdk.out folder as an artifact tagged with the Run Number
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact-${{ github.run_number }}
+          path: cdk.out/
+          retention-days: 7
