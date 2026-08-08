@@ -31,12 +31,12 @@ jobs:
       - name: Synthesize CDK App
         run: npx cdk synth
 
-      # Uploads the synthesized CDK CloudFormation output (cdk.out)
+      # Uploads the synthesized CDK CloudFormation output (app)
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-artifact-${{ github.run_number }}
-          path: cdk.out
+          path: app
           if-no-files-found: error
           include-hidden-files: true
           retention-days: 7

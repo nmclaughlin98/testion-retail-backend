@@ -1,0 +1,112 @@
+{
+  "/Default": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/lambda.test.ts:12:17)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ],
+  "/Default/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...Template.fromStack in aws-cdk-lib...",
+        "Object.fromStack (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/lambda.test.ts:60:35)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ],
+  "/Default/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...Template.fromStack in aws-cdk-lib...",
+        "Object.fromStack (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/lambda.test.ts:60:35)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ],
+  "/Default/TestTable/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "TestTable5769773A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Table2 in aws-cdk-lib...",
+        "<anonymous> (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/lambda.test.ts:13:17)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ],
+  "/Default/TestLambda/ManageItemsHandler/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "TestLambdaManageItemsHandler358303E2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new LambdaConstruct (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/main/lambda/lambda.ts:19:36)",
+        "<anonymous> (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/lambda.test.ts:17:21)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ],
+  "/Default/TestLambda/ManageItemsHandler/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "TestLambdaManageItemsHandlerServiceRole5CD07241"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new LambdaConstruct (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/main/lambda/lambda.ts:19:36)",
+        "<anonymous> (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/lambda.test.ts:17:21)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ],
+  "/Default/TestLambda/ManageItemsHandler/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "TestLambdaManageItemsHandlerServiceRoleDefaultPolicyD615491A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.grantReadWriteData in aws-cdk-lib...",
+        "new grantReadWriteData (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/main/lambda/lambda.ts:32:21)",
+        "<anonymous> (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/lambda.test.ts:17:21)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ]
+}

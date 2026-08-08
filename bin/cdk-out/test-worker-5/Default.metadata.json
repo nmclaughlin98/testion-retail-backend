@@ -1,0 +1,70 @@
+{
+  "/Default": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/dynamo-db.test.ts:10:17)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ],
+  "/Default/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...Template.fromStack in aws-cdk-lib...",
+        "Object.fromStack (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/dynamo-db.test.ts:58:35)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ],
+  "/Default/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...Template.fromStack in aws-cdk-lib...",
+        "Object.fromStack (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/dynamo-db.test.ts:58:35)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ],
+  "/Default/TestDatabase/TestionRetailTable": [
+    {
+      "type": "aws:cdk:hasPhysicalName",
+      "data": {
+        "Ref": "TestDatabaseTestionRetailTable5C9546E0"
+      }
+    }
+  ],
+  "/Default/TestDatabase/TestionRetailTable/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "TestDatabaseTestionRetailTable5C9546E0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Table2 in aws-cdk-lib...",
+        "new DatabaseConstruct (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/lib/stack/dynamo-db.ts:11:22)",
+        "<anonymous> (/Users/niallmclaughlin/workspaces/repos/testion-retail-backend/src/test/lib/dynamo-db.test.ts:11:21)",
+        "...Promise.then.completed in jest-circus...",
+        "new Promise (:)",
+        "...jest-circus, node internals, jest-circus, jest-runner..."
+      ]
+    }
+  ]
+}
