@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      build_number: ${{ github.run_number }}
 
     steps:
       - name: Checkout Code
@@ -36,3 +38,10 @@ jobs:
           name: build-artifact-${{ github.run_number }}
           path: app/
           retention-days: 7
+
+      - name: Display Build Number
+        run: |
+          echo "Build Number: ${{ github.run_number }}"
+          echo "### 🚀 Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "**Build Number:** \`${{ github.run_number }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Artifact Name:** \`build-artifact-${{ github.run_number }}\`" >> $GITHUB_STEP_SUMMARY
