@@ -30,6 +30,9 @@ jobs:
         run: npm run build
 
       - name: Synthesize CDK App
+        env:
+          CDK_DEFAULT_ACCOUNT: '334624057595'
+          CDK_DEFAULT_REGION: 'eu-west-2'
         run: npx cdk synth
 
       # Uploads the synthesized CDK CloudFormation output (app)
