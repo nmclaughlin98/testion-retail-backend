@@ -31,17 +31,20 @@ jobs:
       - name: Synthesize CDK App
         run: npx cdk synth
 
-      # Uploads the app folder as an artifact tagged with the Run Number
+      # Uploads the synthesized CDK CloudFormation output (cdk.out)
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-artifact-${{ github.run_number }}
-          path: app/
+          path: cdk.out/
           retention-days: 7
 
       - name: Display Build Number
         run: |
           echo "Build Number: ${{ github.run_number }}"
           echo "### 🚀 Build Summary" >> $GITHUB_STEP_SUMMARY
-          echo "**Build Number:** \`${{ github.run_number }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Build Number:**" >> $GITHUB_STEP_SUMMARY
+          echo '```text' >> $GITHUB_STEP_SUMMARY
+          echo "${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
           echo "**Artifact Name:** \`build-artifact-${{ github.run_number }}\`" >> $GITHUB_STEP_SUMMARY
