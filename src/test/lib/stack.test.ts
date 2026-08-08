@@ -58,7 +58,7 @@ describe('BackendStack', () => {
 
     it('should grant Lambda permissions to DynamoDB', () => {
         const template = Template.fromStack(stack);
-        template.resourceCountIs('AWS::IAM::Policy', 1);
+        template.resourceCountIs('AWS::IAM::Policy', 2);
     });
 
     it('should have correct resource order (DB -> Lambda -> API)', () => {
