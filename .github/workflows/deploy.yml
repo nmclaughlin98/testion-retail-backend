@@ -30,7 +30,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      # Resolves 'latest' to the build number of the most recent successful build run
       - name: Download Build Artifact
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,7 +50,6 @@ jobs:
           echo "Downloading artifact: build-artifact-${TARGET_BUILD}..."
           gh run download --name "build-artifact-${TARGET_BUILD}" --dir cdk-out
 
-          # Displays actual resolved build number at the top of the GitHub Actions run summary page
           echo "## 🚀 Deploying Build #${TARGET_BUILD}" >> $GITHUB_STEP_SUMMARY
           echo "**Resolved Build Number:** \`${TARGET_BUILD}\`" >> $GITHUB_STEP_SUMMARY
           echo "**Artifact:** \`build-artifact-${TARGET_BUILD}\`" >> $GITHUB_STEP_SUMMARY
@@ -63,6 +61,5 @@ jobs:
           role-to-assume: arn:aws:iam::334624057595:role/testion-retail-github-deploy-role
           role-session-name: github-actions-deploy
 
-      # Deploys directly from pre-synthesized cdk-out directory
       - name: Deploy CDK Stack
         run: npx cdk deploy --app cdk-out --require-approval never
