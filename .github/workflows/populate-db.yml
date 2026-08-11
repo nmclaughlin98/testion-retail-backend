@@ -9,7 +9,7 @@ on:
       aws_region:
         description: 'AWS Region'
         required: true
-        default: 'eu-west-1'
+        default: 'eu-west-2'
 
 jobs:
   populate-db:
