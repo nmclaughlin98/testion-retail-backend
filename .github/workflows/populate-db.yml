@@ -1,4 +1,5 @@
-name: 3. Populate DynamoDB Table
+name: 3. Populate Database On-Demand
+
 on:
   workflow_dispatch:
     inputs:
@@ -35,9 +36,9 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ github.event.inputs.aws_region }}
+          role-to-assume: arn:aws:iam::334624057595:role/testion-retail-github-deploy-role
+          role-session-name: github-actions-populate-db
 
       - name: Execute Population Script
         env:
