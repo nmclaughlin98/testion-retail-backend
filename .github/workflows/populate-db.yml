@@ -1,3 +1,4 @@
+name: 3. Populate DynamoDB Table
 on:
   workflow_dispatch:
     inputs:
@@ -42,4 +43,4 @@ jobs:
         env:
           TABLE_NAME: ${{ github.event.inputs.table_name }}
           AWS_REGION: ${{ github.event.inputs.aws_region }}
-        run: node scripts/seed-db.mjs
+        run: node lib/scripts/seed-db.mjs
